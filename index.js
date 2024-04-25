@@ -15,9 +15,9 @@ exports.handler = async (event) => {
 
         // Upload the image to S3
         await s3.putObject({
-            Body: imageBuffer,
             Bucket: bucketName,
             Key: key,
+            Body: imageBuffer,
             ContentType: 'image/jpeg' // Change this according to your image format
         }).promise();
 
