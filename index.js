@@ -1,8 +1,6 @@
 const AWS = require('aws-sdk');
 const s3 = new AWS.S3();
 
-//testing codebuild 
-const x = 1;
 exports.handler = async (event) => {
     try {
         // Retrieve the image data from the event
