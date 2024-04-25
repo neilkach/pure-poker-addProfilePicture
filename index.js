@@ -5,6 +5,8 @@ exports.handler = async (event) => {
     const requestOrigin = event.headers ? event.headers.origin : "*";
 
     try {
+        console.log(event);
+        console.log(event.queryStringParameters);
         const key = event.queryStringParameters.key; 
         console.log(key)
 
