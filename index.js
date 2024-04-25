@@ -4,18 +4,13 @@ const s3 = new AWS.S3();
 exports.handler = async (event) => {
     const requestOrigin = event.headers ? event.headers.origin : "*";
 
-    try {
-        console.log(event);
-        console.log(event.params);
-        const key = event.params.key; 
-        console.log(key)
-
+    try { 
         // Retrieve the image data from the event
-        console.log(event.params.image)
         const imageBuffer = Buffer.from(event.params.image, 'base64');
 
         // Define the S3 bucket and key (file path) where you want to store the image
         const bucketName = 'pure-poker-profile-pics';
+        const key = event.params.key;
 
         // Upload the image to S3
         await s3.putObject({
