@@ -18,7 +18,7 @@ exports.handler = async (event) => {
             Bucket: bucketName,
             Key: key,
             Body: imageBuffer,
-            ContentType: 'image/jpeg' // Change this according to your image format
+            ContentType: 'image/png' // Change this according to your image format
         }).promise();
 
         await updateProfilePic(event.params.username, key);
