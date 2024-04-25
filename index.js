@@ -6,13 +6,13 @@ exports.handler = async (event) => {
 
     try {
         console.log(event);
-        console.log(event.queryStringParameters);
-        const key = event.queryStringParameters.key; 
+        console.log(event.params);
+        const key = event.params.key; 
         console.log(key)
 
         // Retrieve the image data from the event
-        console.log(event.queryStringParameters.image)
-        const imageBuffer = Buffer.from(event.queryStringParameters.image, 'base64');
+        console.log(event.params.image)
+        const imageBuffer = Buffer.from(event.params.image, 'base64');
 
         // Define the S3 bucket and key (file path) where you want to store the image
         const bucketName = 'pure-poker-profile-pics';
