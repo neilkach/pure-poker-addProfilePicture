@@ -7,7 +7,7 @@ exports.handler = async (event) => {
     try {
         const key = event.queryStringParameters.key; 
         console.log(key)
-        
+
         // Retrieve the image data from the event
         console.log(event.queryStringParameters.image)
         const imageBuffer = Buffer.from(event.queryStringParameters.image, 'base64');
@@ -22,8 +22,6 @@ exports.handler = async (event) => {
             Body: imageBuffer,
             ContentType: 'image/jpeg' // Change this according to your image format
         }).promise();
-
-        console.log("Image added to S3 successfully");
 
         return {
             statusCode: 200,
