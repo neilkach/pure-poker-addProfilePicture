@@ -17,7 +17,7 @@ phases:
   post_build:
     commands:
       - echo Deploying to AWS Lambda...
-      - aws lambda update-function-code --function-name getProfilePicture --zip-file fileb://function.zip
+      - aws lambda update-function-code --function-name addProfilePicture --zip-file fileb://function.zip
 
 artifacts:
   files:
