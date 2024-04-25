@@ -11,8 +11,8 @@ exports.handler = async (event) => {
 
         // Define the S3 bucket and key (file path) where you want to store the image
         const bucketName = 'pure-poker-profile-pics';
-        const key = event.params.username + '.jpeg';
-
+        // const key = event.params.username + '.jpeg';
+        const key = 'logo.png'
         // Upload the image to S3
         await s3.putObject({
             Bucket: bucketName,
