@@ -23,12 +23,22 @@ exports.handler = async (event) => {
 
         return {
             statusCode: 200,
+            headers: {
+                "Access-Control-Allow-Origin": requestOrigin,
+                "Access-Control-Allow-Headers": "Content-Type",
+                "Access-Control-Allow-Methods": "OPTIONS,GET"
+            },
             body: JSON.stringify('Image added to S3 successfully')
         };
     } catch (error) {
         console.error('Error adding image to S3:', error);
         return {
             statusCode: 500,
+            headers: {
+                "Access-Control-Allow-Origin": requestOrigin,
+                "Access-Control-Allow-Headers": "Content-Type",
+                "Access-Control-Allow-Methods": "OPTIONS,GET"
+            },
             body: JSON.stringify('Error adding image to S3')
         };
     }
