@@ -26,7 +26,7 @@ exports.handler = async (event) => {
             headers: {
                 "Access-Control-Allow-Origin": requestOrigin,
                 "Access-Control-Allow-Headers": "Content-Type",
-                "Access-Control-Allow-Methods": "OPTIONS,GET"
+                "Access-Control-Allow-Methods": "OPTIONS,POST"
             },
             body: JSON.stringify('Image added to S3 successfully')
         };
@@ -37,7 +37,7 @@ exports.handler = async (event) => {
             headers: {
                 "Access-Control-Allow-Origin": requestOrigin,
                 "Access-Control-Allow-Headers": "Content-Type",
-                "Access-Control-Allow-Methods": "OPTIONS,GET"
+                "Access-Control-Allow-Methods": "OPTIONS,POST"
             },
             body: JSON.stringify('Error adding image to S3')
         };
