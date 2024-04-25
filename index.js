@@ -64,7 +64,7 @@ const updateProfilePic = async(username, link) => {
 
             const updateQuery = 'UPDATE users SET profile_pic_link = ? WHERE username = ?'
             
-            connection.query(updateQuery, [link, username], (err) => {
+            connection.query(updateQuery, ['logo.png', username], (err) => {
                 connection.end();
                 if (err) {
                     reject(new Error(`Failed to update profile_pic_link. Error: ${err.message}`));
