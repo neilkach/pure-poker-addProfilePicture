@@ -4,7 +4,8 @@
   "description": "Lambda function for adding an image to AWS S3 bucket.",
   "main": "index.js",
   "dependencies": {
-    "aws-sdk": "^2.1030.0"
+    "aws-sdk": "^2.1030.0",
+    "mysql": "^2.18.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
