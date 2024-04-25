@@ -6,6 +6,7 @@ exports.handler = async (event) => {
 
     try {
         // Retrieve the image data from the event
+        console.log(event.image)
         const imageBuffer = Buffer.from(event.image, 'base64');
 
         // Define the S3 bucket and key (file path) where you want to store the image
